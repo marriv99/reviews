@@ -1,27 +1,54 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.larghezza-massima{
+  width: 20% !important;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.no-margin-top {
+  margin-top: 0 !important;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.descrizione-evento{
+  white-space: normal;
+  max-height: 3em;
+  line-height: 1em;
 }
 
-#container a {
-  text-decoration: none;
+.add-icon{
+  font-size: 2em;
+  color: white;
+}
+
+.sad-icon{
+  font-size: 3em;
+  color: #eb445a;
+}
+
+.happy-icon{
+  font-size: 3em;
+  color: #25e471;
+}
+
+.font-family{
+  color: white;
+  font-size: 30px;
+}
+
+.font-rating{
+  font-size: 30px;
+}
+
+ion-card{
+  width: 100%;
+  border-color: black;
+  border-radius: 30px;
+  border-style: solid !important;
+  border-width: thin;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  ion-card {
+    width: 750px;
+  }
 }

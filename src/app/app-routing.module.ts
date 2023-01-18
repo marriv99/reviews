@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'insert-reviews',
+    loadChildren: () => import('./insert-reviews/insert-reviews.module').then( m => m.InsertReviewsPageModule)
+  },
 ];
 
 @NgModule({
