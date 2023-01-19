@@ -7,13 +7,23 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./insert-reviews.page.scss'],
 })
 export class InsertReviewsPage implements OnInit {
-  titolo : String | undefined;
-  descrizione : String | undefined;
-  rating : Number | undefined;
+  titolo : String;
+  descrizione : String;
+  rating : Number;
 
   constructor(private modalController: ModalController) { }
 
   ngOnInit() {
+  }
+
+  save(): void {
+    let recensione = {
+      titolo: this.titolo,
+      descrizione: this.descrizione,
+      rating: this.rating
+    };
+
+    this.modalController.dismiss(recensione);
   }
 
   async close() {

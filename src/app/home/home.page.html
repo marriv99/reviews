@@ -14,7 +14,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-card  class="align-middle"> <!--*ngIf="recensioni.length === 0"-->
+  <ion-card *ngIf="recensioni.lenght" class="align-middle">
     <ion-card-content>
       <ion-card-title class="ion-text-center">
         <h1>Non ci sono recensioni</h1>
@@ -26,14 +26,14 @@
   </ion-card>
 
   <ion-list>
-    <ion-card > <!--ngFor="let recensione of recensioni"-->
+    <ion-card *ngFor="let recensione of recensioni">
       <ion-card-header>
         <ion-card-title>
           <h5 class="ion-no-margin ion-text-start"><b>
-              titolo</b></h5>
+            {{recensione.titolo}}</b></h5>
         </ion-card-title>
         <h5 class="ion-text-start">
-          <ion-label class="descrizione-evento">descrizione
+          <ion-label class="descrizione-evento">{{recensione.descrizione}}
           </ion-label>
         </h5>
       </ion-card-header>
@@ -41,13 +41,14 @@
       <ion-card-content>
         <div class="display-flex">
           <ion-item lines="none">
-            <ion-icon slot="start"  name="sad" class="sad-icon ion-margin-end"></ion-icon> <!--*ngIf="recensione.rating < 5"-->
-            <ion-icon slot="start"  name="happy" class="happy-icon ion-margin-end"></ion-icon> <!--*ngIf="recensione.rating >= 5"-->
+            <ion-icon slot="start" *ngIf="recensione.rating < 5" name="sad" class="sad-icon ion-margin-end"></ion-icon>
+            <ion-icon slot="start" *ngIf="recensione.rating >= 5" name="happy" class="happy-icon ion-margin-end"></ion-icon>
             <ion-label class="font-rating">
-              rating
+              {{recensione.rating}}
             </ion-label>
 
-            <ion-button slot="end" class="no-margin-top" type="submit" shape="round" fill="outline" color="danger">
+            <ion-button slot="end" class="no-margin-top" type="submit" shape="round" fill="outline" color="danger"
+            (click)="presentAlertConfirm(recensione)">
               Elimina
               <ion-icon color="red" name="trash-outline"></ion-icon>
             </ion-button>
