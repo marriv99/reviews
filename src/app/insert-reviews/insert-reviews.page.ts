@@ -19,7 +19,8 @@ export class InsertReviewsPage implements OnInit {
     let recensione = {
       titolo: this.titolo,
       descrizione: this.descrizione,
-      rating: this.r
+      rating: this.rating
+    };
 
     this.modalController.dismiss(recensione);
   }
