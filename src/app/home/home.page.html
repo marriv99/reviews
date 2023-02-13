@@ -1,13 +1,31 @@
 <ion-header>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Grand Hotel' rel='stylesheet'>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Grand Hotel"
+    rel="stylesheet"
+  />
 
   <ion-toolbar color="danger">
-    <ion-button icon-right fill="clear" size="default" disabled="true" slot=start>
+    <ion-button
+      icon-right
+      fill="clear"
+      size="default"
+      disabled="true"
+      slot="start"
+    >
       <ion-icon name="add-circle" color="danger"></ion-icon>
     </ion-button>
     <ion-title class="ion-text-center font-family">Home</ion-title>
-    <ion-button (click)="addRecensione()" icon-right fill="clear" size="default" slot=end> 
+    <ion-button
+      (click)="addRecensione()"
+      icon-right
+      fill="clear"
+      size="default"
+      slot="end"
+    >
       <ion-icon name="add-circle" class="add-icon"></ion-icon>
     </ion-button>
   </ion-toolbar>
@@ -29,11 +47,13 @@
     <ion-card *ngFor="let recensione of recensioni">
       <ion-card-header>
         <ion-card-title>
-          <h5 class="ion-no-margin ion-text-start"><b>
-            {{recensione.titolo}}</b></h5>
+          <h5 class="ion-no-margin ion-text-start">
+            <b> {{recensione.titolo}}</b>
+          </h5>
         </ion-card-title>
         <h5 class="ion-text-start">
-          <ion-label class="descrizione-evento">{{recensione.descrizione}}
+          <ion-label class="descrizione-evento"
+            >{{recensione.descrizione}}
           </ion-label>
         </h5>
       </ion-card-header>
@@ -41,14 +61,29 @@
       <ion-card-content>
         <div class="display-flex">
           <ion-item lines="none">
-            <ion-icon slot="start" *ngIf="recensione.rating < 5" name="sad" class="sad-icon ion-margin-end"></ion-icon>
-            <ion-icon slot="start" *ngIf="recensione.rating >= 5" name="happy" class="happy-icon ion-margin-end"></ion-icon>
-            <ion-label class="font-rating">
-              {{recensione.rating}}
-            </ion-label>
+            <ion-icon
+              slot="start"
+              *ngIf="recensione.rating < 5"
+              name="sad"
+              class="sad-icon ion-margin-end"
+            ></ion-icon>
+            <ion-icon
+              slot="start"
+              *ngIf="recensione.rating >= 5"
+              name="happy"
+              class="happy-icon ion-margin-end"
+            ></ion-icon>
+            <ion-label class="font-rating"> {{recensione.rating}} </ion-label>
 
-            <ion-button slot="end" class="no-margin-top" type="submit" shape="round" fill="outline" color="danger"
-            (click)="presentAlertConfirm(recensione)">
+            <ion-button
+              slot="end"
+              class="no-margin-top"
+              type="submit"
+              shape="round"
+              fill="outline"
+              color="danger"
+              (click)="presentAlertConfirm(recensione)"
+            >
               Elimina
               <ion-icon color="red" name="trash-outline"></ion-icon>
             </ion-button>

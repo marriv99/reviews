@@ -1,4 +1,4 @@
-.larghezza-massima{
+.larghezza-massima {
   width: 20% !important;
 }
 
@@ -6,37 +6,37 @@
   margin-top: 0 !important;
 }
 
-.descrizione-evento{
+.descrizione-evento {
   white-space: normal;
   max-height: 3em;
   line-height: 1em;
 }
 
-.add-icon{
+.add-icon {
   font-size: 2em;
   color: white;
 }
 
-.sad-icon{
+.sad-icon {
   font-size: 3em;
   color: #eb445a;
 }
 
-.happy-icon{
+.happy-icon {
   font-size: 3em;
   color: #25e471;
 }
 
-.font-family{
+.font-family {
   color: white;
   font-size: 30px;
 }
 
-.font-rating{
+.font-rating {
   font-size: 30px;
 }
 
-ion-card{
+ion-card {
   width: 100%;
   border-color: black;
   border-radius: 30px;
@@ -47,8 +47,8 @@ ion-card{
   margin-right: auto;
 }
 
-ion-item{
-  --ion-item-background:#1E1E1E;
+ion-item {
+  --ion-item-background: #1e1e1e;
 }
 
 @media only screen and (min-width: 768px) {
