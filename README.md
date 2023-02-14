@@ -4,4 +4,5 @@ Durante le tue mie avventure nello sviluppo web e mobile, mi sono imbattuto nell
 
 L'applicazione inizialmente presentava il database MongoDb installato sulla macchina, ora con l'iuto del file docker-compose ho evocato due contenitori contemporaneamente, il contenitore del server express e il contenitore del database MongoDB. Per eseguire i contenitori si usa il seguente comando:
 
-```docker-compose up```
+```docker-compose up
+```
