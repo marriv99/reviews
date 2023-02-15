@@ -7,7 +7,7 @@
     "build:prod": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test:prod": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
-    "lint": "npx eslint . --quiet --fix",
+    "lint": "npx eslint . --quiet --fix --output-file eslint-results.sarif" ,
     "format": "npx prettier . --write"
   },
   "private": true,
